@@ -44,7 +44,7 @@ public class ListInsertComparison {
         }
 
         List<String> starting = Arrays.asList(items);
-        List<String> ll = new ArrayList<>(starting);
+        List<String> ll = new LinkedList<>(starting);
 
         System.out.printf("The time taken to insert 250k records using list.add method in middle of a linked list is:"
                 + " %3.5f seconds \n", insertMid(ll, starting) / 1_000_000_000.0);
@@ -52,7 +52,7 @@ public class ListInsertComparison {
         System.out.printf("The time taken to insert 250k records using listIterator add method in middle of a linked list is:"
                 + " %3.5f seconds \n", insertIter(ll, starting) / 1_000_000_000.0);
 
-
+        //When ll is an Array list the time taken is reversed.
 
 
     }

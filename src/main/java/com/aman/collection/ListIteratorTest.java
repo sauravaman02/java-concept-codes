@@ -11,13 +11,15 @@ public class ListIteratorTest {
         List<String> myListRev = Arrays.asList("String4", "String3", "String2", "String1");
         List<String> myListTemp = new ArrayList<>(Collections.emptyList());
 
+        //creating and using list iterator
         ListIterator<String> listIterator = myList.listIterator(myList.size());
         while(listIterator.hasPrevious()) {
-
             myListTemp.add(listIterator.previous());
         }
 
         System.out.println(myListRev.toString().equals(myListTemp.toString()));
         System.out.println(myList.toString().equals(myListRev.toString()));
     }
+
+
 }
